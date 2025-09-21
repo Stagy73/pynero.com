@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pynero – Solutions Innovantes et Créatives</title>
-  <meta name="description" content="Pynero propose des solutions innovantes et créatives pour entreprises et particuliers. Découvrez nos services de développement, consulting et support. Contactez-nous pour concrétiser vos projets.">
-  <meta name="keywords" content="Pynero, innovation, technologie, solutions créatives, consulting, développement, support technique">
+  <title>Pynero – Innovative and Creative Solutions</title>
+  <meta name="description" content="Pynero provides innovative and creative solutions for businesses and individuals. Discover our development, consulting, and support services. Contact us to bring your projects to life.">
+  <meta name="keywords" content="Pynero, innovation, technology, creative solutions, consulting, development, technical support">
   <meta name="author" content="Pynero">
 
-  <meta property="og:title" content="Pynero – Solutions Innovantes et Créatives">
-  <meta property="og:description" content="Pynero propose des solutions innovantes et créatives pour entreprises et particuliers. Contactez-nous pour concrétiser vos projets.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pynero – Innovative and Creative Solutions">
+  <meta property="og:description" content="Pynero provides innovative and creative solutions for businesses and individuals. Contact us to bring your projects to life.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pynero.com">
   <meta property="og:image" content="https://pynero.com/og-image.jpg">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
     body { line-height: 1.6; color: #333; background: #f4f4f9; }
 
     header {
       background: linear-gradient(135deg, #6c63ff, #3f3d56);
       color: #fff;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 3rem; margin-bottom: 15px; }
-    header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+    header h1 { font-size: 3rem; margin-bottom: 20px; animation: fadeInDown 1s ease forwards; opacity: 0; }
+    header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; animation: fadeInUp 1s ease 0.5s forwards; opacity: 0; }
 
     nav { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
     nav ul { display: flex; justify-content: center; list-style: none; }
@@ -33,16 +36,17 @@
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
     nav ul li a:hover { color: #6c63ff; }
 
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
-    section h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: #6c63ff; }
+    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: #6c63ff; }
 
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
     .feature {
-      background: #fff; padding: 25px; border-radius: 12px;
+      background: #fff; padding: 30px; border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.4s, box-shadow 0.4s;
+      opacity: 0; transform: translateY(30px);
     }
-    .feature:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .feature:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
     .feature h3 { margin-bottom: 15px; color: #3f3d56; font-size: 1.5rem; }
     .feature p { font-size: 1rem; color: #555; line-height: 1.5; }
 
@@ -51,6 +55,13 @@
       text-align: center; max-width: 1000px; margin-left: auto; margin-right: auto;
     }
     .about p { font-size: 1.1rem; margin-bottom: 20px; color: #333; }
+
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .testimonial {
+      background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      font-style: italic; opacity: 0; transform: translateY(30px);
+      transition: transform 0.4s, opacity 0.4s;
+    }
 
     .contact-form {
       background: #fff; padding: 50px; border-radius: 12px;
@@ -71,6 +82,9 @@
 
     footer { text-align: center; padding: 25px; background: #3f3d56; color: #fff; }
 
+    @keyframes fadeInDown { to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
     @media(max-width: 768px){
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
@@ -82,59 +96,85 @@
 <body>
 
   <header>
-    <h1>Bienvenue chez Pynero</h1>
-    <p>Nous transformons vos idées en solutions innovantes et créatives. Découvrez comment nous accompagnons entreprises et particuliers dans leurs projets les plus ambitieux.</p>
+    <h1>Welcome to Pynero</h1>
+    <p>We turn your ideas into innovative and creative solutions. Discover how we support businesses and individuals in their most ambitious projects.</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#features">Services</a></li>
-      <li><a href="#about">À propos</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <section id="features">
-    <h2>Nos Services</h2>
+    <h2>Our Services</h2>
     <div class="features">
       <div class="feature">
-        <h3>Innovation Technologique</h3>
-        <p>Développement de solutions sur mesure pour booster votre productivité et créativité.</p>
+        <h3>Technology Innovation</h3>
+        <p>We develop custom solutions to boost your productivity and creativity.</p>
       </div>
       <div class="feature">
-        <h3>Consulting Stratégique</h3>
-        <p>Accompagnement pour transformer vos projets en succès mesurable et durable.</p>
+        <h3>Strategic Consulting</h3>
+        <p>We help turn your projects into measurable and lasting success.</p>
       </div>
       <div class="feature">
         <h3>Support & Maintenance</h3>
-        <p>Suivi et optimisation continue de vos solutions pour performance et sécurité.</p>
+        <p>We ensure continuous optimization and performance of your solutions.</p>
       </div>
       <div class="feature">
-        <h3>Formation et Accompagnement</h3>
-        <p>Formation de vos équipes et accompagnement dans l’adoption des nouvelles technologies.</p>
+        <h3>Training & Guidance</h3>
+        <p>We train your team and support adoption of new technologies.</p>
       </div>
     </div>
   </section>
 
   <section id="about" class="about">
-    <h2>À propos de Pynero</h2>
-    <p>Pynero allie expertise technique et créativité pour répondre aux besoins des entreprises modernes et des particuliers ambitieux.</p>
-    <p>Nous croyons que chaque projet mérite une approche sur mesure. Grâce à notre équipe multidisciplinaire, nous transformons vos idées en solutions concrètes et durables, tout en assurant un support constant.</p>
+    <h2>About Pynero</h2>
+    <p>Pynero combines technical expertise and creativity to meet the needs of modern businesses and ambitious individuals.</p>
+    <p>We believe every project deserves a tailored approach. Our multidisciplinary team transforms your ideas into concrete and sustainable solutions while providing constant support.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">"Pynero transformed our internal process; we now save precious time!" – Client A</div>
+      <div class="testimonial">"The strategic guidance was impeccable, highly recommended." – Client B</div>
+      <div class="testimonial">"Technical support is fast and efficient, a pleasure to work with." – Client C</div>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contactez-nous</h2>
+    <h2>Contact Us</h2>
     <form class="contact-form" action="https://formspree.io/f/xldprgnb" method="POST">
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 Pynero. Tous droits réservés.
+    &copy; 2025 Pynero. All rights reserved.
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.feature, .testimonial').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
