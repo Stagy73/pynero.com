@@ -3,72 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pynero – Solutions Innovantes</title>
-  <meta name="description" content="Découvrez Pynero, votre partenaire pour des solutions innovantes et créatives. Contactez-nous pour plus d'informations.">
-  <meta name="keywords" content="Pynero, innovation, technologie, solutions créatives, services">
+  <title>Pynero – Solutions Innovantes et Créatives</title>
+  <meta name="description" content="Pynero propose des solutions innovantes et créatives pour entreprises et particuliers. Découvrez nos services de développement, consulting et support. Contactez-nous pour concrétiser vos projets.">
+  <meta name="keywords" content="Pynero, innovation, technologie, solutions créatives, consulting, développement, support technique">
   <meta name="author" content="Pynero">
-  <!-- Open Graph pour réseaux sociaux -->
-  <meta property="og:title" content="Pynero – Solutions Innovantes">
-  <meta property="og:description" content="Découvrez Pynero, votre partenaire pour des solutions innovantes et créatives.">
+
+  <meta property="og:title" content="Pynero – Solutions Innovantes et Créatives">
+  <meta property="og:description" content="Pynero propose des solutions innovantes et créatives pour entreprises et particuliers. Contactez-nous pour concrétiser vos projets.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pynero.com">
   <meta property="og:image" content="https://pynero.com/og-image.jpg">
 
   <style>
-    /* Reset & base */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body { line-height: 1.6; color: #333; background: #f4f4f9; }
 
     header {
       background: linear-gradient(135deg, #6c63ff, #3f3d56);
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+    header h1 { font-size: 3rem; margin-bottom: 15px; }
+    header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
 
-    nav { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
     nav ul { display: flex; justify-content: center; list-style: none; }
-    nav ul li { margin: 0 15px; }
+    nav ul li { margin: 0 20px; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
     nav ul li a:hover { color: #6c63ff; }
 
     section { padding: 60px 20px; max-width: 1200px; margin: auto; }
     section h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: #6c63ff; }
 
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
     .feature {
-      background: #fff; padding: 20px; border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;
+      background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .feature:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-    .feature h3 { margin-bottom: 15px; color: #3f3d56; }
-    .feature p { font-size: 1rem; color: #555; }
+    .feature:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .feature h3 { margin-bottom: 15px; color: #3f3d56; font-size: 1.5rem; }
+    .feature p { font-size: 1rem; color: #555; line-height: 1.5; }
+
+    .about {
+      background: #e8e8ff; padding: 60px 20px; border-radius: 12px; margin-bottom: 60px;
+      text-align: center; max-width: 1000px; margin-left: auto; margin-right: auto;
+    }
+    .about p { font-size: 1.1rem; margin-bottom: 20px; color: #333; }
 
     .contact-form {
-      background: #fff; padding: 40px; border-radius: 10px;
-      max-width: 600px; margin: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: #fff; padding: 50px; border-radius: 12px;
+      max-width: 600px; margin: auto; box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
+    .contact-form:hover { transform: translateY(-5px); }
     .contact-form input, .contact-form textarea {
-      width: 100%; padding: 10px; margin-bottom: 20px;
-      border: 1px solid #ccc; border-radius: 5px;
+      width: 100%; padding: 12px; margin-bottom: 20px;
+      border: 1px solid #ccc; border-radius: 8px;
       font-size: 1rem;
     }
     .contact-form button {
-      background: #6c63ff; color: #fff; border: none; padding: 15px 25px;
-      font-size: 1rem; border-radius: 5px; cursor: pointer; transition: background 0.3s;
+      background: #6c63ff; color: #fff; border: none; padding: 15px 30px;
+      font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background 0.3s, transform 0.2s;
     }
-    .contact-form button:hover { background: #5751d4; }
+    .contact-form button:hover { background: #5751d4; transform: scale(1.05); }
 
-    footer {
-      text-align: center; padding: 20px; background: #3f3d56; color: #fff;
-    }
+    footer { text-align: center; padding: 25px; background: #3f3d56; color: #fff; }
 
     @media(max-width: 768px){
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
+      nav ul { flex-direction: column; }
+      nav ul li { margin: 10px 0; }
     }
   </style>
 </head>
@@ -76,12 +83,13 @@
 
   <header>
     <h1>Bienvenue chez Pynero</h1>
-    <p>Votre partenaire pour des solutions innovantes et créatives. Nous transformons vos idées en réalité.</p>
+    <p>Nous transformons vos idées en solutions innovantes et créatives. Découvrez comment nous accompagnons entreprises et particuliers dans leurs projets les plus ambitieux.</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#features">Services</a></li>
+      <li><a href="#about">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -94,19 +102,29 @@
         <p>Développement de solutions sur mesure pour booster votre productivité et créativité.</p>
       </div>
       <div class="feature">
-        <h3>Consulting</h3>
-        <p>Accompagnement stratégique pour transformer vos projets en succès mesurable.</p>
+        <h3>Consulting Stratégique</h3>
+        <p>Accompagnement pour transformer vos projets en succès mesurable et durable.</p>
       </div>
       <div class="feature">
         <h3>Support & Maintenance</h3>
-        <p>Nous assurons le suivi et l’optimisation de vos solutions pour une performance durable.</p>
+        <p>Suivi et optimisation continue de vos solutions pour performance et sécurité.</p>
+      </div>
+      <div class="feature">
+        <h3>Formation et Accompagnement</h3>
+        <p>Formation de vos équipes et accompagnement dans l’adoption des nouvelles technologies.</p>
       </div>
     </div>
   </section>
 
+  <section id="about" class="about">
+    <h2>À propos de Pynero</h2>
+    <p>Pynero allie expertise technique et créativité pour répondre aux besoins des entreprises modernes et des particuliers ambitieux.</p>
+    <p>Nous croyons que chaque projet mérite une approche sur mesure. Grâce à notre équipe multidisciplinaire, nous transformons vos idées en solutions concrètes et durables, tout en assurant un support constant.</p>
+  </section>
+
   <section id="contact">
     <h2>Contactez-nous</h2>
-    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/mgebknez" method="POST">
       <input type="text" name="name" placeholder="Votre nom" required>
       <input type="email" name="email" placeholder="Votre email" required>
       <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
