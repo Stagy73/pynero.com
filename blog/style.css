@@ -1,0 +1,191 @@
+/* ------------------------------
+   General Reset & Body
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+}
+
+/* ------------------------------
+   Header / Article Title
+------------------------------ */
+article header {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+article header h1 {
+  font-size: 2.8rem;
+  color: #3f3d56;
+  margin-bottom: 10px;
+}
+
+article header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* ------------------------------
+   Article Content
+------------------------------ */
+article {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Paragraphs */
+article p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Headings */
+article h2,
+article h3,
+article h4 {
+  color: #3f3d56;
+  margin: 30px 0 15px;
+  line-height: 1.3;
+}
+
+article h2 {
+  font-size: 2rem;
+}
+
+article h3 {
+  font-size: 1.6rem;
+}
+
+article h4 {
+  font-size: 1.3rem;
+}
+
+/* ------------------------------
+   Links
+------------------------------ */
+article a {
+  color: #6c63ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+article a:hover {
+  color: #3f3d56;
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Images
+------------------------------ */
+article img {
+  max-width: 100%;
+  display: block;
+  margin: 25px auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+   Blockquotes
+------------------------------ */
+article blockquote {
+  border-left: 4px solid #6c63ff;
+  background-color: #f4f4f9;
+  padding: 15px 20px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* ------------------------------
+   Lists
+------------------------------ */
+article ul,
+article ol {
+  margin: 20px 0 20px 30px;
+}
+
+article li {
+  margin-bottom: 10px;
+}
+
+/* ------------------------------
+   Code Blocks
+------------------------------ */
+article pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 25px 0;
+}
+
+article code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+}
+
+/* ------------------------------
+   Horizontal Rules
+------------------------------ */
+article hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 40px 0;
+}
+
+/* ------------------------------
+   Footer / Author / Tags
+------------------------------ */
+article footer {
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+article footer a {
+  color: #6c63ff;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 768px) {
+  article {
+    padding: 25px;
+  }
+
+  article header h1 {
+    font-size: 2rem;
+  }
+
+  article h2 {
+    font-size: 1.5rem;
+  }
+
+  article h3 {
+    font-size: 1.3rem;
+  }
+}
