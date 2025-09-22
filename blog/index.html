@@ -24,37 +24,57 @@
 
 <h1>Pynero Blog</h1>
 
-<!-- Post 1 -->
-<div class="post">
-  <h2>How Pynero Boosts Productivity</h2>
-  <img src="https://via.placeholder.com/900x400.png?text=Boost+Productivity" alt="Boosting Productivity with Pynero">
-  <p>Learn how Pynero's innovative solutions streamline workflows, automate repetitive tasks, and empower teams to focus on what matters most.</p>
-  <a href="how-pynero-boosts-productivity.html" class="read-more">Read More →</a>
-</div>
+<div id="blog-posts"></div>
 
-<!-- Post 2 -->
-<div class="post">
-  <h2>Top Strategic Consulting Tips</h2>
-  <img src="https://via.placeholder.com/900x400.png?text=Consulting+Tips" alt="Strategic Consulting Tips">
-  <p>Discover essential strategic consulting tips from Pynero to enhance your business performance and achieve long-term success.</p>
-  <a href="strategic-consulting-tips.html" class="read-more">Read More →</a>
-</div>
+<script>
+  // List of blog posts
+  const posts = [
+    {
+      title: "The Ultimate Guide to Domain Flipping",
+      img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping",
+      alt: "Domain Flipping Guide",
+      summary: "Learn how to buy undervalued domains and sell them for a profit. Discover step-by-step strategies to start domain flipping in 2025.",
+      link: "Create domain-flipping-guide-how-to.html"
+    },
+    {
+      title: "Guide to Innovative Solutions",
+      img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions",
+      alt: "Innovative Solutions",
+      summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively and effectively.",
+      link: "innovative-solutions-guide.html"
+    },
+    {
+      title: "Top Strategic Consulting Tips",
+      img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips",
+      alt: "Strategic Consulting Tips",
+      summary: "Discover essential strategic consulting tips from Pynero to enhance your business performance and achieve long-term success.",
+      link: "strategic-consulting-tips.html"
+    },
+    {
+      title: "How Pynero Boosts Productivity",
+      img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
+      alt: "Boosting Productivity with Pynero",
+      summary: "Learn how Pynero's innovative solutions streamline workflows, automate repetitive tasks, and empower teams to focus on what matters most.",
+      link: "how-pynero-boosts-productivity.html"
+    }
+  ];
 
-<!-- Post 3 -->
-<div class="post">
-  <h2>Guide to Innovative Solutions</h2>
-  <img src="https://via.placeholder.com/900x400.png?text=Innovative+Solutions" alt="Innovative Solutions">
-  <p>Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively and effectively.</p>
-  <a href="innovative-solutions-guide.html" class="read-more">Read More →</a>
-</div>
+  // Reference to the container
+  const container = document.getElementById('blog-posts');
 
-<!-- Post 4: Domain Flipping -->
-<div class="post">
-  <h2>The Ultimate Guide to Domain Flipping</h2>
-  <img src="https://via.placeholder.com/900x400.png?text=Domain+Flipping" alt="Domain Flipping Guide">
-  <p>Learn how to buy undervalued domains and sell them for a profit. Discover step-by-step strategies to start domain flipping in 2025.</p>
-  <a href="Create domain-flipping-guide-how-to.html" class="read-more">Read More →</a>
-</div>
+  // Render posts dynamically (newest first)
+  posts.forEach(post => {
+    const div = document.createElement('div');
+    div.className = 'post';
+    div.innerHTML = `
+      <h2>${post.title}</h2>
+      <img src="${post.img}" alt="${post.alt}">
+      <p>${post.summary}</p>
+      <a href="${post.link}" class="read-more">Read More →</a>
+    `;
+    container.appendChild(div);
+  });
+</script>
 
 </body>
 </html>
