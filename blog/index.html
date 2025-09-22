@@ -1,160 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pynero Blog | Insights, Tips & Innovation</title>
-  <meta name="description" content="Read Pynero’s blog for productivity tips, strategic consulting advice, and innovative solutions to boost your business.">
-  <meta name="keywords" content="Pynero, blog, productivity, consulting, innovation, business tips">
-  <meta property="og:title" content="Pynero Blog | Insights, Tips & Innovation">
-  <meta property="og:description" content="Read Pynero’s blog for productivity tips, strategic consulting advice, and innovative solutions to boost your business.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Pynero+Blog">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pynero Blog | Insights, Tips & Innovation</title>
+    <meta
+      name="description"
+      content="Read Pynero’s blog for productivity tips, strategic consulting advice, and innovative solutions to boost your business."
+    />
+    <meta
+      name="keywords"
+      content="Pynero, blog, productivity, consulting, innovation, business tips"
+    />
+    <meta
+      property="og:title"
+      content="Pynero Blog | Insights, Tips & Innovation"
+    />
+    <meta
+      property="og:description"
+      content="Read Pynero’s blog for productivity tips, strategic consulting advice, and innovative solutions to boost your business."
+    />
+    <meta
+      property="og:image"
+      content="https://via.placeholder.com/1200x630.png?text=Pynero+Blog"
+    />
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: #f4f4f9;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.6;
+        background: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
 
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background: linear-gradient(135deg, #6c63ff, #3f3d56);
-      color: #fff;
-    }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; }
+      header {
+        text-align: center;
+        padding: 60px 20px 20px;
+        background: linear-gradient(135deg, #6c63ff, #3f3d56);
+        color: #fff;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
 
-    nav.blog-nav {
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 10px 0;
-      margin-bottom: 40px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav.blog-nav a {
-      text-decoration: none;
-      color: #3f3d56;
-      font-weight: bold;
-      margin: 5px 15px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
-    }
-    nav.blog-nav a:hover {
-      background: #6c63ff;
-      color: #fff;
-    }
+      nav.blog-nav {
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        margin-bottom: 40px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav.blog-nav a {
+        text-decoration: none;
+        color: #3f3d56;
+        font-weight: bold;
+        margin: 5px 15px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.3s, color 0.3s;
+      }
+      nav.blog-nav a:hover {
+        background: #6c63ff;
+        color: #fff;
+      }
 
-    main {
-      max-width: 1200px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-    }
+      main {
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+      }
 
-    #blog-posts {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
+      #blog-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
 
-    .post {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .post:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
+      .post {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
 
-    .post img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+      .post img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
 
-    .post-content {
-      padding: 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+      .post-content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
 
-    .post h2 {
-      font-size: 1.5rem;
-      color: #3f3d56;
-      margin-bottom: 15px;
-    }
+      .post h2 {
+        font-size: 1.5rem;
+        color: #3f3d56;
+        margin-bottom: 15px;
+      }
 
-    .post p {
-      flex: 1;
-      margin-bottom: 15px;
-      color: #555;
-    }
+      .post p {
+        flex: 1;
+        margin-bottom: 15px;
+        color: #555;
+      }
 
-    .read-more {
-      text-decoration: none;
-      font-weight: bold;
-      color: #6c63ff;
-      transition: color 0.3s;
-      align-self: flex-start;
-    }
-    .read-more:hover {
-      color: #3f3d56;
-    }
+      .read-more {
+        text-decoration: none;
+        font-weight: bold;
+        color: #6c63ff;
+        transition: color 0.3s;
+        align-self: flex-start;
+      }
+      .read-more:hover {
+        color: #3f3d56;
+      }
 
-    @media(max-width: 768px){
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      nav.blog-nav a { margin: 5px 8px; }
-    }
-  </style>
-</head>
-<body>
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        nav.blog-nav a {
+          margin: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Pynero Blog</h1>
+      <p>Insights, Tips & Innovation to boost your business</p>
+    </header>
 
-  <header>
-    <h1>Pynero Blog</h1>
-    <p>Insights, Tips & Innovation to boost your business</p>
-  </header>
+    <!-- Blog navigation menu -->
+    <nav class="blog-nav" id="blog-menu"></nav>
 
-  <!-- Blog navigation menu -->
-  <nav class="blog-nav" id="blog-menu"></nav>
+    <main>
+      <div id="blog-posts"></div>
+    </main>
 
-  <main>
-    <div id="blog-posts"></div>
-  </main>
+    <script>
+      const posts = [
+        {
+          title: "How to Start Affiliate Marketing in 2025",
+          img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing",
+          alt: "Affiliate Marketing Guide",
+          summary:
+            "Step-by-step guide to earn passive income through affiliate marketing this year.",
+          link: "How-to-Start-Affiliate-Marketing-in-2025.html",
+        },
+        {
+          title: "The Ultimate Guide to Domain Flipping",
+          img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping",
+          alt: "Domain Flipping Guide",
+          summary:
+            "Learn how to buy undervalued domains and sell them for a profit.",
+          link: "domain-flipping-guide-how-to.html",
+        },
+        {
+          title: "Guide to Innovative Solutions",
+          img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions",
+          alt: "Innovative Solutions",
+          summary:
+            "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
+          link: "innovative-solutions-guide.html",
+        },
+        {
+          title: "Top Strategic Consulting Tips",
+          img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips",
+          alt: "Strategic Consulting Tips",
+          summary:
+            "Essential strategic consulting tips from Pynero to enhance business performance.",
+          link: "strategic-consulting-tips.html",
+        },
+        {
+          title: "How Pynero Boosts Productivity",
+          img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
+          alt: "Boosting Productivity with Pynero",
+          summary:
+            "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
+          link: "how-pynero-boosts-productivity.html",
+        },
+      ];
 
-  <script>
-    const posts = [
-      { title: "How to Start Affiliate Marketing in 2025", img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing", alt: "Affiliate Marketing Guide", summary: "Step-by-step guide to earn passive income through affiliate marketing this year.", link: "How to Start Affiliate Marketing in 2025.html" },
-      { title: "The Ultimate Guide to Domain Flipping", img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping", alt: "Domain Flipping Guide", summary: "Learn how to buy undervalued domains and sell them for a profit.", link: "domain-flipping-guide-how-to.html" },
-      { title: "Guide to Innovative Solutions", img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions", alt: "Innovative Solutions", summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.", link: "innovative-solutions-guide.html" },
-      { title: "Top Strategic Consulting Tips", img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips", alt: "Strategic Consulting Tips", summary: "Essential strategic consulting tips from Pynero to enhance business performance.", link: "strategic-consulting-tips.html" },
-      { title: "How Pynero Boosts Productivity", img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity", alt: "Boosting Productivity with Pynero", summary: "Learn how Pynero's innovative solutions streamline workflows and empower teams.", link: "how-pynero-boosts-productivity.html" }
-    ];
+      const container = document.getElementById("blog-posts");
+      const menu = document.getElementById("blog-menu");
 
-    const container = document.getElementById('blog-posts');
-    const menu = document.getElementById('blog-menu');
-
-    posts.forEach(post => {
-      // Create post card
-      const div = document.createElement('div');
-      div.className = 'post';
-      div.id = post.title.toLowerCase().replace(/\s+/g, '-');
-      div.innerHTML = `
+      posts.forEach((post) => {
+        // Create post card
+        const div = document.createElement("div");
+        div.className = "post";
+        div.id = post.title.toLowerCase().replace(/\s+/g, "-");
+        div.innerHTML = `
         <a href="${post.link}">
           <img src="${post.img}" alt="${post.alt}">
         </a>
@@ -164,15 +224,14 @@
           <a href="${post.link}" class="read-more">Read More →</a>
         </div>
       `;
-      container.appendChild(div);
+        container.appendChild(div);
 
-      // Create menu link
-      const link = document.createElement('a');
-      link.href = '#' + div.id;
-      link.textContent = post.title;
-      menu.appendChild(link);
-    });
-  </script>
-
-</body>
+        // Create menu link
+        const link = document.createElement("a");
+        link.href = "#" + div.id;
+        link.textContent = post.title;
+        menu.appendChild(link);
+      });
+    </script>
+  </body>
 </html>
