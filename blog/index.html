@@ -9,77 +9,158 @@
   <meta property="og:title" content="Pynero Blog | Insights, Tips & Innovation">
   <meta property="og:description" content="Read Pynero’s blog for productivity tips, strategic consulting advice, and innovative solutions to boost your business.">
   <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Pynero+Blog">
+
   <style>
-    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; padding: 20px; max-width: 1000px; margin: auto; }
-    h1 { color: #6c63ff; margin-bottom: 30px; text-align: center; }
-    h2 { color: #3f3d56; margin-bottom: 10px; }
-    .post { border-bottom: 1px solid #ddd; padding: 20px 0; }
-    .post img { max-width: 100%; border-radius: 12px; margin: 10px 0; }
-    .post p { margin-bottom: 10px; }
-    .read-more { color: #6c63ff; text-decoration: none; font-weight: bold; }
-    .read-more:hover { text-decoration: underline; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #6c63ff, #3f3d56);
+      color: #fff;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    #blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .post {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post h2 {
+      font-size: 1.5rem;
+      color: #3f3d56;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      flex: 1;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .read-more {
+      text-decoration: none;
+      font-weight: bold;
+      color: #6c63ff;
+      transition: color 0.3s;
+      align-self: flex-start;
+    }
+    .read-more:hover {
+      color: #3f3d56;
+    }
+
+    @media(max-width: 768px){
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
 
-<h1>Pynero Blog</h1>
+  <header>
+    <h1>Pynero Blog</h1>
+    <p>Insights, Tips & Innovation to boost your business</p>
+  </header>
 
-<div id="blog-posts"></div>
+  <main>
+    <div id="blog-posts"></div>
+  </main>
 
-<script>
-  // List of all blog posts (newest first)
-  const posts = [
-    {
-      title: "How to Start Affiliate Marketing in 2025",
-      img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing",
-      alt: "Affiliate Marketing Guide",
-      summary: "Step-by-step guide to earn passive income through affiliate marketing this year.",
-      link: "how-to-start-affiliate-marketing-2025.html"
-    },
-    {
-      title: "The Ultimate Guide to Domain Flipping",
-      img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping",
-      alt: "Domain Flipping Guide",
-      summary: "Learn how to buy undervalued domains and sell them for a profit.",
-      link: "create-domain-flipping-guide-how-to.html"
-    },
-    {
-      title: "Guide to Innovative Solutions",
-      img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions",
-      alt: "Innovative Solutions",
-      summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
-      link: "innovative-solutions-guide.html"
-    },
-    {
-      title: "Top Strategic Consulting Tips",
-      img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips",
-      alt: "Strategic Consulting Tips",
-      summary: "Essential strategic consulting tips from Pynero to enhance business performance.",
-      link: "strategic-consulting-tips.html"
-    },
-    {
-      title: "How Pynero Boosts Productivity",
-      img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
-      alt: "Boosting Productivity with Pynero",
-      summary: "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
-      link: "how-pynero-boosts-productivity.html"
-    }
-  ];
+  <script>
+    const posts = [
+      {
+        title: "How to Start Affiliate Marketing in 2025",
+        img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing",
+        alt: "Affiliate Marketing Guide",
+        summary: "Step-by-step guide to earn passive income through affiliate marketing this year.",
+        link: "how-to-start-affiliate-marketing-2025.html"
+      },
+      {
+        title: "The Ultimate Guide to Domain Flipping",
+        img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping",
+        alt: "Domain Flipping Guide",
+        summary: "Learn how to buy undervalued domains and sell them for a profit.",
+        link: "create-domain-flipping-guide-how-to.html"
+      },
+      {
+        title: "Guide to Innovative Solutions",
+        img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions",
+        alt: "Innovative Solutions",
+        summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
+        link: "innovative-solutions-guide.html"
+      },
+      {
+        title: "Top Strategic Consulting Tips",
+        img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips",
+        alt: "Strategic Consulting Tips",
+        summary: "Essential strategic consulting tips from Pynero to enhance business performance.",
+        link: "strategic-consulting-tips.html"
+      },
+      {
+        title: "How Pynero Boosts Productivity",
+        img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
+        alt: "Boosting Productivity with Pynero",
+        summary: "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
+        link: "how-pynero-boosts-productivity.html"
+      }
+    ];
 
-  const container = document.getElementById('blog-posts');
-
-  posts.forEach(post => {
-    const div = document.createElement('div');
-    div.className = 'post';
-    div.innerHTML = `
-      <h2>${post.title}</h2>
-      <img src="${post.img}" alt="${post.alt}">
-      <p>${post.summary}</p>
-      <a href="${post.link}" class="read-more">Read More →</a>
-    `;
-    container.appendChild(div);
-  });
-</script>
+    const container = document.getElementById('blog-posts');
+    posts.forEach(post => {
+      const div = document.createElement('div');
+      div.className = 'post';
+      div.innerHTML = `
+        <img src="${post.img}" alt="${post.alt}">
+        <div class="post-content">
+          <h2>${post.title}</h2>
+          <p>${post.summary}</p>
+          <a href="${post.link}" class="read-more">Read More →</a>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  </script>
 
 </body>
 </html>
