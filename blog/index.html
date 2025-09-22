@@ -21,16 +21,42 @@
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px 20px;
       background: linear-gradient(135deg, #6c63ff, #3f3d56);
       color: #fff;
     }
     header h1 { font-size: 3rem; margin-bottom: 10px; }
     header p { font-size: 1.2rem; }
 
+    nav.blog-nav {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      margin-bottom: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav.blog-nav a {
+      text-decoration: none;
+      color: #3f3d56;
+      font-weight: bold;
+      margin: 5px 15px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav.blog-nav a:hover {
+      background: #6c63ff;
+      color: #fff;
+    }
+
     main {
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 0 auto 60px;
       padding: 0 20px;
     }
 
@@ -93,6 +119,7 @@
     @media(max-width: 768px){
       header h1 { font-size: 2.2rem; }
       header p { font-size: 1rem; }
+      nav.blog-nav a { margin: 5px 8px; }
     }
   </style>
 </head>
@@ -103,53 +130,32 @@
     <p>Insights, Tips & Innovation to boost your business</p>
   </header>
 
+  <!-- Blog navigation menu -->
+  <nav class="blog-nav" id="blog-menu">
+    <!-- Menu items will be added dynamically -->
+  </nav>
+
   <main>
     <div id="blog-posts"></div>
   </main>
 
   <script>
     const posts = [
-      {
-        title: "How to Start Affiliate Marketing in 2025",
-        img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing",
-        alt: "Affiliate Marketing Guide",
-        summary: "Step-by-step guide to earn passive income through affiliate marketing this year.",
-        link: "how-to-start-affiliate-marketing-2025.html"
-      },
-      {
-        title: "The Ultimate Guide to Domain Flipping",
-        img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping",
-        alt: "Domain Flipping Guide",
-        summary: "Learn how to buy undervalued domains and sell them for a profit.",
-        link: "create-domain-flipping-guide-how-to.html"
-      },
-      {
-        title: "Guide to Innovative Solutions",
-        img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions",
-        alt: "Innovative Solutions",
-        summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
-        link: "innovative-solutions-guide.html"
-      },
-      {
-        title: "Top Strategic Consulting Tips",
-        img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips",
-        alt: "Strategic Consulting Tips",
-        summary: "Essential strategic consulting tips from Pynero to enhance business performance.",
-        link: "strategic-consulting-tips.html"
-      },
-      {
-        title: "How Pynero Boosts Productivity",
-        img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
-        alt: "Boosting Productivity with Pynero",
-        summary: "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
-        link: "how-pynero-boosts-productivity.html"
-      }
+      { title: "How to Start Affiliate Marketing in 2025", img: "https://via.placeholder.com/900x400.png?text=Affiliate+Marketing", alt: "Affiliate Marketing Guide", summary: "Step-by-step guide to earn passive income through affiliate marketing this year.", link: "how-to-start-affiliate-marketing-2025.html" },
+      { title: "The Ultimate Guide to Domain Flipping", img: "https://via.placeholder.com/900x400.png?text=Domain+Flipping", alt: "Domain Flipping Guide", summary: "Learn how to buy undervalued domains and sell them for a profit.", link: "create-domain-flipping-guide-how-to.html" },
+      { title: "Guide to Innovative Solutions", img: "https://via.placeholder.com/900x400.png?text=Innovative+Solutions", alt: "Innovative Solutions", summary: "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.", link: "innovative-solutions-guide.html" },
+      { title: "Top Strategic Consulting Tips", img: "https://via.placeholder.com/900x400.png?text=Consulting+Tips", alt: "Strategic Consulting Tips", summary: "Essential strategic consulting tips from Pynero to enhance business performance.", link: "strategic-consulting-tips.html" },
+      { title: "How Pynero Boosts Productivity", img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity", alt: "Boosting Productivity with Pynero", summary: "Learn how Pynero's innovative solutions streamline workflows and empower teams.", link: "how-pynero-boosts-productivity.html" }
     ];
 
     const container = document.getElementById('blog-posts');
+    const menu = document.getElementById('blog-menu');
+
     posts.forEach(post => {
+      // Create post card
       const div = document.createElement('div');
       div.className = 'post';
+      div.id = post.title.toLowerCase().replace(/\s+/g, '-');
       div.innerHTML = `
         <img src="${post.img}" alt="${post.alt}">
         <div class="post-content">
@@ -159,6 +165,12 @@
         </div>
       `;
       container.appendChild(div);
+
+      // Create menu link
+      const link = document.createElement('a');
+      link.href = '#' + div.id;
+      link.textContent = post.title;
+      menu.appendChild(link);
     });
   </script>
 
