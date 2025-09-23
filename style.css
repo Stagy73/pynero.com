@@ -1,60 +1,18 @@
-/* Reset & base */
+/* ===============================
+   Reset & Base Styles
+   =============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #222;
-  padding: 20px;
-}
-
-/* Container */
-article {
-  max-width: 800px;
-  margin: auto;
-  background-color: #fff;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-/* Headings */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
-  color: #003366;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin-top: 1.5em;
-  color: #004080;
-}
-
-/* Paragraphs & Lists */
-p {
-  margin-bottom: 1em;
-}
-
-ul,
-ol {
-  margin-left: 1.5em;
-  margin-bottom: 1em;
-}
-
-ul li,
-ol li {
-  margin-bottom: 0.5em;
+  color: #333;
+  background-color: #f4f4f9;
 }
 
 /* Links */
@@ -63,70 +21,14 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 3em;
-  padding-top: 1em;
-  border-top: 1px solid #ccc;
-  font-size: 0.9em;
-  color: #555;
-}
-
-footer a {
-  margin: 0 0.5em;
-  color: #0066cc;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-
-  article {
-    padding: 1.5em;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-}
-footer a {
-  color: #ffffff; /* Normal link color in footer */
-  text-decoration: none;
-}
-
-footer a:visited {
-  color: #cccccc; /* Color for visited links */
-}
-
-footer a:hover,
-footer a:focus {
-  color: #00ccff; /* Optional hover color */
-  text-decoration: underline;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-  scroll-behavior: smooth;
-}
-body {
-  line-height: 1.6;
-  color: #333;
-  background: #f4f4f9;
-}
+/* ===============================
+   Header
+   =============================== */
 header {
   position: relative;
   background: linear-gradient(
@@ -145,12 +47,16 @@ header h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
+
 header p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
 }
 
+/* ===============================
+   Navigation
+   =============================== */
 nav {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -158,29 +64,37 @@ nav {
   top: 0;
   z-index: 10;
 }
+
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  padding: 15px 0;
 }
+
 nav ul li {
   margin: 0 20px;
 }
+
 nav ul li a {
-  text-decoration: none;
-  color: #333;
   font-weight: bold;
+  color: #333;
   transition: color 0.3s;
 }
+
 nav ul li a:hover {
   color: #6c63ff;
 }
 
+/* ===============================
+   Sections
+   =============================== */
 section {
   padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
 }
+
 section h2 {
   text-align: center;
   margin-bottom: 50px;
@@ -188,11 +102,15 @@ section h2 {
   color: #6c63ff;
 }
 
+/* ===============================
+   Features / Services
+   =============================== */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+
 .feature {
   background: #fff;
   padding: 30px;
@@ -201,21 +119,34 @@ section h2 {
   text-align: center;
   transition: transform 0.4s, box-shadow 0.4s;
 }
+
 .feature:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
 .feature h3 {
   margin-bottom: 15px;
   color: #3f3d56;
   font-size: 1.5rem;
 }
+
 .feature p {
   font-size: 1rem;
   color: #555;
   line-height: 1.5;
 }
 
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+/* ===============================
+   About Section
+   =============================== */
 .about {
   background: #e8e8ff;
   padding: 60px 20px;
@@ -226,17 +157,22 @@ section h2 {
   margin-left: auto;
   margin-right: auto;
 }
+
 .about p {
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #333;
 }
 
+/* ===============================
+   Testimonials
+   =============================== */
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+
 .testimonial {
   background: #fff;
   padding: 25px;
@@ -245,6 +181,9 @@ section h2 {
   font-style: italic;
 }
 
+/* ===============================
+   Contact Form
+   =============================== */
 .contact-form {
   background: #fff;
   padding: 50px;
@@ -253,6 +192,7 @@ section h2 {
   margin: auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -262,6 +202,7 @@ section h2 {
   border-radius: 8px;
   font-size: 1rem;
 }
+
 .contact-form button {
   background: #6c63ff;
   color: #fff;
@@ -272,10 +213,14 @@ section h2 {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .contact-form button:hover {
   background: #5751d4;
 }
 
+/* ===============================
+   Footer
+   =============================== */
 footer {
   text-align: center;
   padding: 25px;
@@ -283,6 +228,67 @@ footer {
   color: #fff;
 }
 
+footer a {
+  color: #ffffff;
+  margin: 0 0.5em;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #00ccff;
+  text-decoration: underline;
+}
+
+/* ===============================
+   Cookie Banner
+   =============================== */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f8f8;
+  color: #333;
+  padding: 1em;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.cookie-banner a {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  margin-top: 0.5em;
+}
+
+.cookie-buttons button {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cookie-buttons button:last-child {
+  background: #ccc;
+  color: #000;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
@@ -295,5 +301,8 @@ footer {
   }
   nav ul li {
     margin: 10px 0;
+  }
+  section h2 {
+    font-size: 2rem;
   }
 }
