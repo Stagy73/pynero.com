@@ -1,0 +1,102 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 20px;
+}
+
+/* Container */
+article {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: #003366;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 1.5em;
+  color: #004080;
+}
+
+/* Paragraphs & Lists */
+p {
+  margin-bottom: 1em;
+}
+
+ul,
+ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer a {
+  margin: 0 0.5em;
+  color: #0066cc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  article {
+    padding: 1.5em;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
