@@ -27,6 +27,190 @@
     <meta property="og:url" content="https://pynero.com" />
     <meta property="og:image" content="https://pynero.com/og-image.jpg" />
 
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        line-height: 1.6;
+        color: #333;
+        background: #f4f4f9;
+      }
+      header {
+        position: relative;
+        background: linear-gradient(
+            135deg,
+            rgba(108, 99, 255, 0.7),
+            rgba(63, 61, 86, 0.7)
+          ),
+          url("header.png") no-repeat center center;
+        background-size: cover;
+        color: #fff;
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      header p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      nav {
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+      nav ul li {
+        margin: 0 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover {
+        color: #6c63ff;
+      }
+
+      section {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      section h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+        color: #6c63ff;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .feature {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.4s, box-shadow 0.4s;
+      }
+      .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+      .feature h3 {
+        margin-bottom: 15px;
+        color: #3f3d56;
+        font-size: 1.5rem;
+      }
+      .feature p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .about {
+        background: #e8e8ff;
+        padding: 60px 20px;
+        border-radius: 12px;
+        margin-bottom: 60px;
+        text-align: center;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .testimonial {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        font-style: italic;
+      }
+
+      .contact-form {
+        background: #fff;
+        padding: 50px;
+        border-radius: 12px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      .contact-form button {
+        background: #6c63ff;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .contact-form button:hover {
+        background: #5751d4;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #3f3d56;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        nav ul {
+          flex-direction: column;
+        }
+        nav ul li {
+          margin: 10px 0;
+        }
+      }
+    </style>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -41,22 +225,18 @@
       })(window, document, "script", "dataLayer", "GTM-MH7JJQ5H");
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
+    <noscript
+      ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-MH7JJQ5H"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-
-    <!-- Header -->
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <h1>Welcome to Pynero</h1>
       <p>
@@ -65,7 +245,6 @@
       </p>
     </header>
 
-    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="#features">Services</a></li>
@@ -76,7 +255,6 @@
       </ul>
     </nav>
 
-    <!-- Services Section -->
     <section id="features">
       <h2>Our Services</h2>
       <div class="features">
@@ -104,7 +282,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
       <h2>About Pynero</h2>
       <p>
@@ -118,7 +295,6 @@
       </p>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
       <h2>Client Testimonials</h2>
       <div class="testimonials">
@@ -137,7 +313,6 @@
       </div>
     </section>
 
-    <!-- Blog Section -->
     <section id="blog">
       <h2>From Our Blog</h2>
       <div id="blog-posts" class="features"></div>
@@ -171,7 +346,7 @@
         },
         {
           title: "Guide to Innovative Solutions",
-          img: "https://www.pynero.com/assets/Guide to Innovative Solutions.png",
+          img: "https://pynero.com/assets/Guide to Innovative Solutions.png",
           alt: "Innovative Solutions",
           summary:
             "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
@@ -179,7 +354,7 @@
         },
         {
           title: "Top Strategic Consulting Tips",
-          img: "https://www.pynero.com/assets/Top Strategic Consulting Tips.png",
+          img: "https://pynero.com/assets/Top Strategic Consulting Tips.png",
           alt: "Strategic Consulting Tips",
           summary:
             "Essential strategic consulting tips from Pynero to enhance business performance.",
@@ -187,7 +362,7 @@
         },
         {
           title: "How Pynero Boosts Productivity",
-          img: "https://www.pynero.com/assets/How Pynero Boosts Productivity.png",
+          img: "https://pyenro.com/assets/How Pynero Boosts Productivity.png",
           alt: "Boosting Productivity with Pynero",
           summary:
             "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
@@ -196,22 +371,22 @@
       ];
 
       const container = document.getElementById("blog-posts");
+
       posts.forEach((post) => {
         const div = document.createElement("div");
         div.className = "feature";
         div.innerHTML = `
-          <a href="${post.link}" style="text-decoration:none; color:#3f3d56;">
-            <img src="${post.img}" alt="${post.alt}" style="width:100%; border-radius:12px; margin-bottom:15px;">
-            <h3>${post.title}</h3>
-          </a>
-          <p>${post.summary}</p>
-          <a href="${post.link}" class="read-more" style="color:#6c63ff; font-weight:bold;">Read More →</a>
-        `;
+      <a href="${post.link}" style="text-decoration:none; color:#3f3d56;">
+        <img src="${post.img}" alt="${post.alt}" style="width:100%; border-radius:12px; margin-bottom:15px;">
+        <h3>${post.title}</h3>
+      </a>
+      <p>${post.summary}</p>
+      <a href="${post.link}" class="read-more" style="color:#6c63ff; font-weight:bold;">Read More →</a>
+    `;
         container.appendChild(div);
       });
     </script>
 
-    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
       <form
@@ -231,7 +406,6 @@
       </form>
     </section>
 
-    <!-- Footer -->
     <footer>
       <p>
         &copy; 2025 Pynero.com — All rights reserved |
@@ -240,8 +414,7 @@
         <a href="cookie-policy.html">Cookies</a>
       </p>
     </footer>
-
-    <!-- GDPR Cookie Consent -->
+    <!-- ✅ GDPR Cookie Consent -->
     <div id="cookie-consent-banner" class="cookie-banner">
       <p>
         We use cookies to improve your experience. By clicking "Accept", you
@@ -256,26 +429,81 @@
     </div>
 
     <script>
+      // Only show the banner if the user hasn't made a choice
       window.addEventListener("DOMContentLoaded", () => {
         const consent = localStorage.getItem("cookieConsent");
-        if (!consent)
+        if (!consent) {
           document.getElementById("cookie-consent-banner").style.display =
             "block";
+        }
       });
+
+      // Accept cookies
       document
         .getElementById("accept-cookies")
         .addEventListener("click", () => {
           localStorage.setItem("cookieConsent", "accepted");
           document.getElementById("cookie-consent-banner").style.display =
             "none";
+          // ✅ You can trigger scripts like Google Analytics here
+          // Example: initAnalytics();
         });
+
+      // Reject cookies
       document
         .getElementById("reject-cookies")
         .addEventListener("click", () => {
           localStorage.setItem("cookieConsent", "rejected");
           document.getElementById("cookie-consent-banner").style.display =
             "none";
+          // ❌ Do NOT load tracking scripts
         });
     </script>
+
+    <style>
+      .cookie-banner {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #f8f8f8;
+        color: #333;
+        padding: 1em;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        font-size: 14px;
+      }
+
+      .cookie-banner p {
+        margin: 0;
+        padding: 0.5em 0;
+      }
+
+      .cookie-banner a {
+        color: #0073e6;
+        text-decoration: underline;
+      }
+
+      .cookie-buttons {
+        margin-top: 0.5em;
+      }
+
+      .cookie-buttons button {
+        background: #0073e6;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        margin-right: 0.5em;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .cookie-buttons button:last-child {
+        background: #ccc;
+        color: #000;
+      }
+    </style>
   </body>
 </html>
