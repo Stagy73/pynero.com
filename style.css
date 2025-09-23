@@ -100,3 +100,17 @@ footer a {
     font-size: 1.2rem;
   }
 }
+footer a {
+  color: #ffffff; /* Normal link color in footer */
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: #cccccc; /* Color for visited links */
+}
+
+footer a:hover,
+footer a:focus {
+  color: #00ccff; /* Optional hover color */
+  text-decoration: underline;
+}
