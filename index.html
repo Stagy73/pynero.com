@@ -308,50 +308,77 @@
 
     <section id="blog">
       <h2>From Our Blog</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>
-            <a
-              href="blog/how-to-start-affiliate-marketing-in-2025.html"
-              style="text-decoration: none; color: #3f3d56"
-            >
-              How to Start Affiliate Marketing in 2025
-            </a>
-          </h3>
-          <p>
-            Step-by-step guide to earn passive income through affiliate
-            marketing this year.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>
-            <a
-              href="blog/domain-flipping-guide-how-to.html"
-              style="text-decoration: none; color: #3f3d56"
-            >
-              The Ultimate Guide to Domain Flipping
-            </a>
-          </h3>
-          <p>
-            Learn how to buy undervalued domains and sell them for a profit.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>
-            <a
-              href="blog/innovative-solutions-guide.html"
-              style="text-decoration: none; color: #3f3d56"
-            >
-              Guide to Innovative Solutions
-            </a>
-          </h3>
-          <p>
-            Explore Pynero’s guide to innovative solutions that help businesses
-            solve challenges creatively.
-          </p>
-        </div>
-      </div>
+      <div id="blog-posts" class="features"></div>
     </section>
+
+    <script>
+      const posts = [
+        {
+          title: "Essential Tools for Domain Flipping & Appraisal",
+          img: "https://www.pynero.com/assets/Essential Tools for Domain Flipping & Appraisal.png",
+          alt: "Domain Flipping Tools Guide",
+          summary:
+            "Discover the top tools to research, appraise, and sell domains for profit in 2025.",
+          link: "blog/domain-flipping-tools.html",
+        },
+        {
+          title: "How to Start Affiliate Marketing in 2025",
+          img: "https://www.pynero.com/assets/How to Start Affiliate Marketing in 2025.png",
+          alt: "Affiliate Marketing Guide",
+          summary:
+            "Step-by-step guide to earn passive income through affiliate marketing this year.",
+          link: "blog/how-to-start-affiliate-marketing-in-2025.html",
+        },
+        {
+          title: "The Ultimate Guide to Domain Flipping",
+          img: "https://www.pynero.com/assets/The Ultimate Guide to Domain Flipping.png",
+          alt: "Domain Flipping Guide",
+          summary:
+            "Learn how to buy undervalued domains and sell them for a profit.",
+          link: "blog/domain-flipping-guide-how-to.html",
+        },
+        {
+          title: "Guide to Innovative Solutions",
+          img: "https://pynero.com/assets/Guide to Innovative Solutions.png",
+          alt: "Innovative Solutions",
+          summary:
+            "Explore Pynero’s guide to innovative solutions that help businesses solve challenges creatively.",
+          link: "blog/innovative-solutions-guide.html",
+        },
+        {
+          title: "Top Strategic Consulting Tips",
+          img: "https://pynero.com/assets/Top Strategic Consulting Tips.png",
+          alt: "Strategic Consulting Tips",
+          summary:
+            "Essential strategic consulting tips from Pynero to enhance business performance.",
+          link: "blog/strategic-consulting-tips.html",
+        },
+        {
+          title: "How Pynero Boosts Productivity",
+          img: "https://via.placeholder.com/900x400.png?text=Boost+Productivity",
+          alt: "Boosting Productivity with Pynero",
+          summary:
+            "Learn how Pynero's innovative solutions streamline workflows and empower teams.",
+          link: "blog/how-pynero-boosts-productivity.html",
+        },
+      ];
+
+      const container = document.getElementById("blog-posts");
+
+      posts.forEach((post) => {
+        const div = document.createElement("div");
+        div.className = "feature";
+        div.innerHTML = `
+      <a href="${post.link}" style="text-decoration:none; color:#3f3d56;">
+        <img src="${post.img}" alt="${post.alt}" style="width:100%; border-radius:12px; margin-bottom:15px;">
+        <h3>${post.title}</h3>
+      </a>
+      <p>${post.summary}</p>
+      <a href="${post.link}" class="read-more" style="color:#6c63ff; font-weight:bold;">Read More →</a>
+    `;
+        container.appendChild(div);
+      });
+    </script>
 
     <section id="contact">
       <h2>Contact Us</h2>
